@@ -1,0 +1,8 @@
+$ go build -ldflags '-X=github.com/zwass/garble_test/imported.ExportedVar=replaced -X=github.com/zwass/garble_test/imported.private=replaced' main.go
+$ ./main
+var: replaced
+private var: replaced
+ $ garble build -ldflags '-X=github.com/zwass/garble_test/imported.ExportedVar=replaced -X=github.com/zwass/garble_test/imported.private=replaced' main.go
+ $ ./main
+var: original
+private var: original
